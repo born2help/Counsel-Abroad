@@ -1,149 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Counsel Abroad — B2H Global Foundation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Counsel Abroad — B2B Student Counseling</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
 
-  <!-- Style CSS -->
-  <link rel="stylesheet" href="style.css">
+<style>
+/* =============== RESET =============== */
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Montserrat', sans-serif; }
+body { background:#0c1f2f; color:#fff; line-height:1.5; }
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="B2H Global Foundation — Counsel Abroad">
-  <meta property="og:description" content="Partner with B2H to guide students abroad and earn commissions.">
-  <meta property="og:image" content="images/hero.jpg">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://yourdomain.com/counsel-abroad.html">
+/* =============== HERO =============== */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background: url('https://images.unsplash.com/photo-1596496052072-5e32740f0a0c?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+  color: #fff;
+}
+
+.hero::after {
+  content:'';
+  position:absolute;
+  top:0; left:0; width:100%; height:100%;
+  background: rgba(12,31,47,0.6);
+}
+
+.hero h1 {
+  position: relative;
+  font-size:2.8rem;
+  z-index:1;
+  color:#00f0a0;
+  text-shadow: 0 0 15px #00f0a0;
+}
+
+.hero p {
+  position: relative;
+  z-index:1;
+  font-size:1.2rem;
+  margin:15px 0 30px;
+}
+
+.hero .cta-buttons {
+  position: relative;
+  z-index:1;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:15px;
+}
+
+.hero .cta-buttons a {
+  padding:12px 30px;
+  font-weight:700;
+  border-radius:50px;
+  text-decoration:none;
+  color:#fff;
+  background: linear-gradient(45deg,#00f0a0,#14b8a6,#ff9900);
+  box-shadow:0 0 15px rgba(0,240,160,0.5);
+  transition:0.3s;
+}
+
+.hero .cta-buttons a:hover {
+  transform:translateY(-3px) scale(1.05);
+  box-shadow:0 0 25px rgba(0,240,160,0.7);
+}
+
+/* =============== INFO CARDS =============== */
+.cards {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+  padding:40px 20px;
+}
+
+.card {
+  background: rgba(0,240,160,0.1);
+  border-radius:16px;
+  padding:25px;
+  width:260px;
+  text-align:center;
+  transition:0.3s;
+}
+
+.card h3 { color:#00f0a0; margin-bottom:12px; }
+.card p { font-size:0.95rem; }
+.card:hover { transform:translateY(-6px); box-shadow:0 0 20px rgba(0,240,160,0.5); }
+
+/* =============== FOOTER =============== */
+footer {
+  text-align:center;
+  padding:30px 20px;
+  font-size:0.95rem;
+  background: #06131b;
+}
+
+footer a {
+  color:#00f0a0; text-decoration:none; font-weight:600;
+}
+
+footer a:hover { text-decoration:underline; }
+
+/* =============== RESPONSIVE =============== */
+@media(max-width:768px) {
+  .hero h1 { font-size:2rem; }
+  .hero p { font-size:1rem; }
+  .cards { flex-direction:column; align-items:center; }
+}
+</style>
 </head>
-<body class="b2h-subpage" id="top">
+<body>
 
-<section class="glass-container">
-
-  <!-- ================= HERO ================= -->
-  <section class="page-hero visible">
-    <canvas id="heroParticles" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;"></canvas>
-
-    <h1 class="green-glow">Counsel Abroad — Join & Partner</h1>
-    <p class="subtitle">Guide students to global education opportunities and earn commissions with B2H</p>
-
-    <div class="hero-actions">
-      <a href="#partner-form" class="btn-glow">Become a Partner</a>
-      <a href="#university-form" class="btn-glow">University Contact</a>
-      <a href="index.html" class="btn-glow">← Back Home</a>
-    </div>
-
-    <hr class="section-divider">
-  </section>
-
-  <!-- ================= ABOUT ================= -->
-  <section class="section">
-    <h2 class="section-title green-glow">Why Partner With B2H</h2>
-    <p>B2H Education provides a seamless platform for offices, counselors, and individuals to guide students abroad.  
-    Whether you have a local office or just want to support students, we offer **commissions, incentives, and full support**.</p>
-    <p>Universities can also connect directly to our verified student profiles for enrollment and admissions.</p>
-  </section>
-
-  <hr class="section-divider">
-
-  <!-- ================= OPPORTUNITIES ================= -->
-  <section class="section light">
-    <h2 class="section-title green-glow">Opportunities for Partners</h2>
-    <ul>
-      <li>Earn commission for every successfully enrolled student</li>
-      <li>Access to global university programs and updates</li>
-      <li>Marketing & operational support from B2H</li>
-      <li>Flexible participation — no registration required</li>
-    </ul>
-
-    <h2 class="section-title green-glow">Opportunities for Universities</h2>
-    <ul>
-      <li>Direct student profile submissions</li>
-      <li>Priority verification and processing</li>
-      <li>Ethical partnership with transparent participation</li>
-      <li>Trusted global network for long-term enrollment</li>
-    </ul>
-  </section>
-
-  <hr class="section-divider">
-
-  <!-- ================= HOW IT WORKS ================= -->
-  <section class="section">
-    <h2 class="section-title green-glow">How It Works</h2>
-    <div class="how-it-works-grid">
-      <div class="step">
-        <h3>1. Register</h3>
-        <p>Sign up as a partner or university to access our platform.</p>
-      </div>
-      <div class="step">
-        <h3>2. Submit Profiles</h3>
-        <p>Partners submit student details; universities share program info.</p>
-      </div>
-      <div class="step">
-        <h3>3. Approval</h3>
-        <p>B2H verifies and approves submissions ethically and securely.</p>
-      </div>
-      <div class="step">
-        <h3>4. Earn & Connect</h3>
-        <p>Partners receive commission; universities receive verified profiles.</p>
-      </div>
-    </div>
-  </section>
-
-  <hr class="section-divider">
-
-  <!-- ================= FORMS ================= -->
-  <section class="section">
-    <h2 class="section-title green-glow" id="partner-form">Become a Partner</h2>
-    <p>Fill out this form to start your counseling journey and earn incentives.</p>
-    <form class="participation-form" action="https://example.com/partner-submit" method="POST">
-      <input type="text" name="name" placeholder="Full Name" required>
-      <input type="email" name="email" placeholder="Email Address" required>
-      <input type="tel" name="phone" placeholder="Phone Number" required>
-      <input type="text" name="office" placeholder="Office / Company Name" required>
-      <textarea name="message" rows="4" placeholder="How many students you can guide (optional)"></textarea>
-      <button type="submit" class="green-btn">Submit Application</button>
-    </form>
-  </section>
-
-  <hr class="section-divider">
-
-  <section class="section light">
-    <h2 class="section-title green-glow" id="university-form">University Contact Form</h2>
-    <p>University officials can submit student programs and details here for direct processing.</p>
-    <form class="participation-form" action="https://example.com/university-submit" method="POST">
-      <input type="text" name="name" placeholder="Full Name" required>
-      <input type="email" name="email" placeholder="Email Address" required>
-      <input type="tel" name="phone" placeholder="Phone Number" required>
-      <input type="text" name="university" placeholder="University Name" required>
-      <textarea name="programs" rows="4" placeholder="Programs / Student Details (optional)"></textarea>
-      <button type="submit" class="green-btn">Submit Details</button>
-    </form>
-  </section>
-
-  <a href="index.html" class="glass-back btn-glow">← Back Home</a>
-
+<!-- =============== HERO =============== -->
+<section class="hero">
+  <h1>Counsel Abroad 🌏</h1>
+  <p>Earn commissions 💰 by connecting students with top universities globally</p>
+  <div class="cta-buttons">
+    <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+    <a href="https://www.instagram.com/direct/inbox/" target="_blank">DM on Instagram</a>
+    <a href="#apply-form">Apply Now</a>
+  </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
-<footer class="site-footer">
-  <div class="footer-links">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="volunteer.html">Volunteer</a>
-    <a href="spread-awareness.html">Spread Awareness</a>
-    <a href="donate.html">Donate</a>
-    <a href="white-paper.html">White Paper</a>
-    <a href="burn-ethics.html">Burn & Ethics</a>
-    <a href="founder-continuity.html">Founder Continuity</a>
-    <a href="tokenomics.html">Tokenomics</a>
+<!-- =============== INFO CARDS =============== -->
+<section class="cards">
+  <div class="card">
+    <h3>For Agents & Counselors</h3>
+    <p>Earn commission for each student successfully enrolled abroad. Flexible & fully supported.</p>
   </div>
-  <p>&copy; 2026 B2H Global Foundation. All rights reserved.</p>
-  <a href="#top" class="back-to-top">↑ Back to Top</a>
+  <div class="card">
+    <h3>For Schools & Local Offices</h3>
+    <p>Partner with us to send your students abroad and earn incentives with minimal effort.</p>
+  </div>
+  <div class="card">
+    <h3>For Universities</h3>
+    <p>Get direct student profiles and expand your global enrollment network ethically.</p>
+  </div>
+</section>
+
+<!-- =============== APPLY FORM =============== -->
+<section id="apply-form" class="cards">
+  <div class="card">
+    <h3>Join & Partner</h3>
+    <form action="https://example.com/submit" method="POST" style="display:flex; flex-direction:column; gap:10px;">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="text" name="organization" placeholder="Agency / School / University Name" required>
+      <button type="submit" style="padding:12px; border:none; border-radius:50px; font-weight:700; background:linear-gradient(45deg,#00f0a0,#14b8a6,#ff9900); color:#fff; cursor:pointer;">Submit</button>
+    </form>
+  </div>
+</section>
+
+<!-- =============== FOOTER =============== -->
+<footer>
+  <p>&copy; 2026 Counsel Abroad. All rights reserved.</p>
+  <p><a href="#top">↑ Back to Top</a></p>
 </footer>
 
-<script src="subpage.js"></script>
 </body>
 </html>

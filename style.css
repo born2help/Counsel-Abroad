@@ -1,321 +1,202 @@
-/* ===============================
-   B2H Subpage Unified CSS (LOCKED)
-   Affects ONLY pages with body.b2h-subpage
-   =============================== */
-
-body.b2h-subpage {
-
-  /* ---- Variables (SCOPED, SAFE) ---- */
-  --b2h-bg-dark: #0b0f1a;
-  --b2h-bg-soft: #111827;
-  --b2h-text-main: #e5e7eb;
-  --b2h-text-soft: #9ca3af;
-  --b2h-accent: #32cd32;
-  --gradient-accent: linear-gradient(90deg, #32cd32, #00ffd0, #32cd32);
-  --font-body: 'Montserrat', sans-serif;
-  --font-heading: 'Montserrat', sans-serif;
-
-  background-color: var(--b2h-bg-dark);
-  color: var(--b2h-text-main);
-  font-family: var(--font-body);
-  line-height: 1.7;
-  font-size: 16px;
-}
-
-/* ---- Global ---- */
-body.b2h-subpage * {
+/* ================= GLOBAL RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-body.b2h-subpage a {
-  color: var(--b2h-accent);
-  text-decoration: none;
-  transition: color 0.3s ease;
+html {
+  scroll-behavior: smooth;
 }
 
-body.b2h-subpage a:hover {
-  color: #00ffd0;
-}
-
-/* ---- Hero ---- */
-body.b2h-subpage .page-hero {
-  position: relative;
-  text-align: center;
-  padding: 80px 20px 45px;
-  overflow: hidden;
-}
-
-body.b2h-subpage .page-hero h1 {
-  font-family: var(--font-heading);
-  font-size: 3rem;
-  font-weight: 800;
-  background: var(--gradient-accent);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  position: relative;
-  z-index: 2;
-}
-
-body.b2h-subpage .page-hero .subtitle {
-  font-size: 1.15rem;
-  margin-top: 12px;
-  color: var(--b2h-text-soft);
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* ---- Hero Actions ---- */
-body.b2h-subpage .hero-actions {
-  margin-top: 25px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-}
-
-body.b2h-subpage .hero-actions a {
-  padding: 12px 28px;
-  border-radius: 30px;
-  font-weight: 700;
-  background: var(--b2h-accent);
-  color: var(--b2h-bg-dark);
-  box-shadow: 0 4px 18px rgba(50, 205, 50, 0.35);
-}
-
-body.b2h-subpage .hero-actions a:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 22px rgba(50, 205, 50, 0.5);
-}
-
-/* ---- Sections ---- */
-body.b2h-subpage .section {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 45px 20px;
-}
-
-body.b2h-subpage .section-title {
-  font-size: 1.8rem;
-  color: var(--b2h-accent);
-  margin-bottom: 18px;
-}
-
-body.b2h-subpage .section-title::after {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 3px;
-  margin-top: 6px;
-  background: var(--gradient-accent);
-  border-radius: 2px;
-}
-
-/* ---- Standard Info Boxes ---- */
-body.b2h-subpage .info-box,
-body.b2h-subpage .donate-box {
-  background: rgba(50,205,50,0.08);
-  padding: 26px;
-  border-radius: 16px;
-  margin-bottom: 25px;
-}
-
-/* ---- Calm / Legal / Governance Boxes ---- */
-body.b2h-subpage .calm-box,
-body.b2h-subpage .legal-note {
-  background: rgba(255,255,255,0.04);
-  border-left: 4px solid var(--b2h-accent);
-  padding: 22px 26px;
-  border-radius: 12px;
-  margin-bottom: 25px;
-}
-
-body.b2h-subpage .legal-note {
-  font-size: 0.95rem;
-  color: var(--b2h-text-soft);
-  line-height: 1.75;
-}
-
-/* ---- Buttons ---- */
-body.b2h-subpage .green-btn,
-body.b2h-subpage .btn-glow,
-body.b2h-subpage .glass-back {
-  background: var(--b2h-accent);
-  color: var(--b2h-bg-dark);
-  padding: 12px 28px;
-  border-radius: 12px;
-  font-weight: 700;
-  display: inline-block;
-}
-
-body.b2h-subpage .green-btn:hover,
-body.b2h-subpage .btn-glow:hover,
-body.b2h-subpage .glass-back:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(50,205,50,0.5);
-}
-
-/* ---- Forms ---- */
-body.b2h-subpage input,
-body.b2h-subpage textarea,
-body.b2h-subpage select {
-  width: 100%;
-  padding: 12px 16px;
-  border-radius: 8px;
-  background: #111827;
-  border: 1px solid rgba(50,205,50,0.6);
-  color: var(--b2h-text-main);
-  margin-bottom: 15px;
-}
-
-body.b2h-subpage input:focus,
-body.b2h-subpage textarea:focus,
-body.b2h-subpage select:focus {
-  outline: none;
-  border-color: #00ffd0;
-  box-shadow: 0 0 8px rgba(0,255,208,0.4);
-}
-
-/* ---- Particle Canvas ---- */
-#heroParticles {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-}
-
-/* ---- Footer ---- */
-body.b2h-subpage .site-footer {
-  background: #0b1f29;
-  padding: 28px 20px;
-  text-align: center;
-  color: var(--b2h-text-soft);
-  font-size: 0.95rem;
-  border-top: 1px solid rgba(255,255,255,0.1);
-}
-
-/* Footer Links */
-body.b2h-subpage .site-footer .footer-links {
-  margin-bottom: 15px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-body.b2h-subpage .site-footer .footer-links a {
-  color: var(--b2h-accent);
-  font-weight: 600;
-}
-
-/* Footer Text */
-body.b2h-subpage .site-footer p {
-  margin: 6px 0;
-}
-
-/* Back to Top */
-body.b2h-subpage .site-footer .back-to-top {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 8px 16px;
-  border-radius: 8px;
-  background: var(--b2h-accent);
-  color: #0b0f1a;
-  font-weight: 600;
-}
-
-/* ================= TRANSPARENCY PAGE STYLES ================= */
-
-/* General Section Styling */
-.b2h-subpage .section {
-  padding: 70px 20px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.b2h-subpage .wp-section {
-  margin-bottom: 60px;
-  text-align: left;
-}
-
-.b2h-subpage .wp-section.highlight {
-  background: rgba(0, 255, 198, 0.05);
-  backdrop-filter: blur(12px);
-  border-radius: 20px;
-  padding: 35px 25px;
-}
-
-/* ================= HEADINGS ================= */
-.b2h-subpage h2.section-title {
-  color: #22c55e; /* green like Mission & Vision */
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 14px;
-  position: relative;
-  text-align: center;
-}
-
-/* Multi-color gradient underline */
-.b2h-subpage h2.section-title::after {
-  content: '';
-  display: block;
-  width: 90px;
-  height: 4px;
-  margin: 8px auto 0;
-  border-radius: 3px;
-  background: linear-gradient(90deg, #22c55e, #0fffc3, #f59e0b, #ef4444);
-  box-shadow: 0 0 12px rgba(0,255,198,0.5);
-}
-
-/* Optional glow on hover (subtle) */
-.b2h-subpage h2.section-title:hover::after {
-  box-shadow: 0 0 18px rgba(0,255,198,0.7);
-}
-
-/* Paragraphs & Lists */
-.b2h-subpage p, 
-.b2h-subpage li {
-  color: #b0e0e6;
-  font-size: 1rem;
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #0b1220;
+  color: #e5f4f6;
   line-height: 1.6;
 }
 
-/* Glass-back button styling */
-.b2h-subpage .glass-back {
-  display: inline-block;
-  margin-top: 40px;
-  padding: 12px 32px;
-  font-weight: 600;
-  border-radius: 50px;
-  background: rgba(0,255,198,0.05);
-  backdrop-filter: blur(8px);
-  color: #22c55e;
+/* ================= LINKS & BUTTONS ================= */
+a {
   text-decoration: none;
+  color: inherit;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 36px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #22c55e, #0ea5a4);
+  color: #02130d;
+  box-shadow: 0 0 20px rgba(34,197,94,0.5);
   transition: all 0.35s ease;
+}
+
+.btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 0 35px rgba(34,197,94,0.9);
+}
+
+/* ================= HERO SECTION ================= */
+.hero {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #10293d, #050b14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  box-shadow: 0 0 12px rgba(0,255,198,0.4);
+  padding: 90px 20px;
+  position: relative;
+  overflow: hidden;
 }
 
-.b2h-subpage .glass-back:hover {
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 0 25px rgba(0,255,198,0.6);
-  color: #0fffc3;
+.hero h1 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: #22c55e;
+  text-shadow: 0 0 18px rgba(34,197,94,0.6);
+  margin-bottom: 18px;
 }
 
-/* Section dividers */
-.b2h-subpage .section-divider {
+.hero p {
+  font-size: 1.15rem;
+  max-width: 720px;
+  margin: 0 auto 35px;
+  color: #cdeef3;
+}
+
+/* ================= SECTIONS ================= */
+.section {
+  padding: 90px 20px;
+  text-align: center;
+}
+
+.section.light {
+  background: #081826;
+}
+
+.section h2 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #22c55e;
+  margin-bottom: 12px;
+  text-shadow: 0 0 14px rgba(34,197,94,0.45);
+}
+
+.section h2::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 4px;
+  margin: 14px auto 30px;
+  border-radius: 4px;
+  background: linear-gradient(
+    90deg,
+    #22c55e,
+    #0ea5a4,
+    #3b82f6,
+    #f59e0b
+  );
+}
+
+.section p {
+  max-width: 760px;
+  margin: 0 auto 25px;
+  font-size: 1.05rem;
+  color: #cfeff5;
+}
+
+/* ================= FEATURES / BOXES ================= */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 26px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.card {
+  background: rgba(34,197,94,0.08);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  width: 260px;
+  padding: 28px 22px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transition: all 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 35px rgba(34,197,94,0.5);
+}
+
+.card h3 {
+  color: #22c55e;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #d4f0f5;
+}
+
+/* ================= FORM ================= */
+.form-container {
+  max-width: 520px;
+  margin: 40px auto 0;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 10px;
   border: none;
-  height: 1px;
-  background: rgba(0,255,198,0.1);
-  margin: 60px 0;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+  background: #0f1f2d;
+  color: #e6f5f7;
 }
 
-/* Responsive adjustments */
+form input::placeholder,
+form textarea::placeholder {
+  color: #9acbd3;
+}
+
+form button {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #050b14;
+  text-align: center;
+  padding: 35px 20px;
+  color: #9fdbe2;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #22c55e;
+  font-weight: 600;
+}
+
+/* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
-  .b2h-subpage h2.section-title { font-size: 1.8rem; }
-  .b2h-subpage .wp-section { padding: 25px 15px; }
-}
+  .hero h1 {
+    font-size: 2.4rem;
+  }
 
-@media (max-width: 480px) {
-  .b2h-subpage h2.section-title { font-size: 1.6rem; }
+  .section h2 {
+    font-size: 2rem;
+  }
+
+  .card {
+    width: 90%;
+  }
 }
